@@ -1,0 +1,101 @@
+Test Automation Approach – List Breweries API
+
+The List Breweries endpoint (GET /v1/breweries) returns a paginated list of breweries and supports multiple optional
+query parameters for filtering and sorting.
+I think the most effective automation strategy is to split the work into separate tasks and estimate the effort using
+story points.
+
+Automation Approach
+
+Test automation for this endpoint should be implemented incrementally by dividing the work into independent tasks,
+each with a clear scope and value.
+This approach allows:
+- better control over scope and priorities
+- realistic estimation based on complexity
+
+Test Design Techniques
+The following techniques would be applied:
+1. Equivalence Partitioning – for parameters with defined valid and invalid value sets (e.g. by_type, by_postal)
+2. Boundary Value Analysis – for pagination and limits (page, per_page)
+3. Pairwise / Combinatorial Testing – for selected combinations of filters
+4. Positive and Negative Testing – to validate both expected and erroneous inputs
+
+Task Breakdown & Story Points
+
+1. Test Analysis & Test Design
+
+Scope:
+analyze API documentation
+identify critical scenarios
+define test coverage and test sets
+select test design techniques
+Story Points: 3
+
+2.Test Framework Setup
+
+Scope:
+project initialization
+API client setup
+configuration management
+base test structure
+README documentation
+test execution instructions
+basic reporting setup
+
+Story Points: 5
+
+3. Core Functional Tests
+
+Scope:
+GET request without parameters
+status code validation
+basic response structure checks
+Story Points: 2
+
+4. Filters Testing (Single Parameter)
+
+Scope:
+Independent tests for each filter: by_city, by_state etc,
+Validation that returned data actually matches the applied filter.
+
+Story Points: 5
+
+5. Pagination & Limits
+
+Scope:
+page: first page, zero, large values
+per_page: minimum, default, maximum, above maximum
+consistency across pages
+
+Story Points: 3
+
+6. Sorting & Special Filters
+
+Scope:
+sorting with asc and desc
+by_dist parameter
+validation of incompatible parameters (by_dist with sort)
+
+Story Points: 3
+
+7. Negative & Edge Case Testing
+
+Scope:
+invalid parameter values
+non-existing cities or countries
+incorrect formats
+expected behavior (empty list vs error response)
+
+Story Points: 5 (or divide ito 2 tasks of 2 and 3 points)
+
+8. Response Contract & Schema Validation
+
+Scope:
+mandatory fields presence
+data types validation
+API contract stability
+
+Story Points: 3
+
+Total Story Points: 29
+

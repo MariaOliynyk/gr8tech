@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="gr8tech-suite" verbose="1">
+  <test name="api-tests">
+    <classes>
+      <!-- The TestNG runner class used in this project -->
+      <class name="CucumberTestRunner"/>
+    </classes>
+  </test>
+</suite>
