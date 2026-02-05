@@ -3,8 +3,7 @@
 <suite name="gr8tech-suite" verbose="1">
   <test name="api-tests">
     <classes>
-      <!-- The TestNG runner class used in this project -->
-      <class name="CucumberTestRunner"/>
+      <class name="com.gr8tech.api.tests.SearchBreweriesTest"/>
     </classes>
   </test>
 </suite>
