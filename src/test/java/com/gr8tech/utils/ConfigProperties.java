@@ -8,7 +8,7 @@ public class ConfigProperties {
         private static final Properties properties = new Properties();
 
         static {
-            try (InputStream input = ConfigProperties.class.getClassLoader().getResourceAsStream("properties/env/qa.properties")) {
+            try (InputStream input = ConfigProperties.class.getClassLoader().getResourceAsStream("config.properties")) {
                 if (input == null) {
                     System.out.println("Unable to find config.properties");
                     throw new RuntimeException("Unable to find config.properties");

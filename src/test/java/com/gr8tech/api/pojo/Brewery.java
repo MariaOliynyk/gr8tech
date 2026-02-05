@@ -25,9 +25,4 @@ public class Brewery {
     private String state;
     private String street;
 
-    // keep a concise custom toString similar to the original
-//    @Override
-//    public String toString() {
-//        return "Brewery{id='" + id + "', name='" + name + "'}";
-//    }
 }
